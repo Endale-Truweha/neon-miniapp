@@ -2,8 +2,7 @@
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import mountains from '../public/image/melaImage.jpg'
-import mountains2 from '../public/image/lottery_winning3.png'
+
 import { LoaderCircle } from 'lucide-react'
 
 
@@ -76,33 +75,13 @@ export default function TelegramAuth() {
     return (
         <div className="flex  items-center justify-center  w-full h-screen ">
             {showSplash ? (
-              <Image
-              alt="Mountains"
-              src={mountains}
-              placeholder="blur"
-              quality={100}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: 'cover',
-              }}
-            />
+            <>image 2</>
             ) : (<>
                
                 <div className='  flex items-center justify-center w-full  h-screen  '>
 
 
-                <Image
-              alt="Mountains2"
-              src={mountains2}
-              placeholder="blur"
-              quality={100}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: 'cover',
-              }}
-            />
+             <>image3</>
 
                 </div>
 
