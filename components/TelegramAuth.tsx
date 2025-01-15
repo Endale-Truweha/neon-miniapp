@@ -75,21 +75,22 @@ export default function TelegramAuth() {
     return (
         <div className="flex  items-center justify-center  w-full h-screen ">
             {showSplash ? (
-            <>image 2</>
+           <div className="fixed inset-0 flex items-center justify-center  bg-ethGreen-400 text-white">
+           <h1 className="text-4xl font-bold">Welcome to My App</h1>
+         </div>
             ) : (<>
                
                 <div className='  flex items-center justify-center w-full  h-screen  '>
 
 
-             <>image3</>
-
-                </div>
-
-                 <div className='fixed  top-0 flex items-center justify-center w-full h-full'>
-                 <div className='   animate-spin'>
+                <div className="fixed inset-0 flex items-center justify-center bg-ethLime-400 text-white">
+                <div className='   animate-spin'>
                  <LoaderCircle size={100} strokeWidth={1.25} color="#6B5000" />
               
                  </div>
+    </div>
+
+               
                  </div>
                 </>
 
