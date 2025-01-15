@@ -76,7 +76,8 @@ export default function TelegramAuth() {
         <div className="flex  items-center justify-center  w-full h-screen ">
             {showSplash ? (
            <div className="fixed inset-0 flex items-center justify-center  bg-ethGreen-400 text-white">
-           <h1 className="text-4xl font-bold">Welcome to My App</h1>
+           <h1 className="text-4xl font-bold"> Network Issue Reporting System Using PRTG and Telegram Mini App
+           </h1>
          </div>
             ) : (<>
                
