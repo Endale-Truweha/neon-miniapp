@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
-
+import Script from "next/script";
 import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +24,9 @@ export default function RootLayout({
       className='scroll-smooth antialiased'
       suppressHydrationWarning
     >
+       <head>
+        <Script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive" />
+      </head>
       <body className={`flex min-h-screen flex-col ${inter.className}`}>
         <ThemeProvider
           enableSystem
