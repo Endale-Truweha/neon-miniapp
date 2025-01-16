@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+const queryClient = new QueryClient()
 
 
 import Script from "next/script";
@@ -27,7 +29,16 @@ export default function RootLayout({
       <body className={`flex min-h-screen flex-col ${inter.className}`}>
       
        
-          <main className='grow'>{children}</main>
+          <main className='grow'>
+            
+       
+    <QueryClientProvider client={queryClient}>
+    {children}
+    <ReactQueryDevtools initialIsOpen={false} />
+  
+  </QueryClientProvider>
+            
+            </main>
       
        
       </body>
