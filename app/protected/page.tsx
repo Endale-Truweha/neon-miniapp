@@ -1,6 +1,7 @@
 import React from 'react';
 import { getSession } from '@/utils/session';
 import Footer from '@/components/footer';
+import StatusDisplay from '@/components/statusDisplay';
 
 async function Page() {
   const session = await getSession();
@@ -16,7 +17,7 @@ async function Page() {
      
     <div className='flex flex-col rounded-t-[48px] bg-ethBlack-500 border-t-2 shadow-2xl border-ethYellow-500 w-full grow p-8'>
       
-     
+     <StatusDisplay/>
     </div>
     </div>
     </div>
