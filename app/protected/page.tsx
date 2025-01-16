@@ -1,10 +1,12 @@
 import React from 'react';
 import { getSession } from '@/utils/session';
+import Footer from '@/components/footer';
 
 async function Page() {
   const session = await getSession();
 
   return (
+    <div>  
     <div className='bg-ethBlack-600  flex '>
        {session?.user && (
         <div>{JSON.stringify(session.user)}</div>
@@ -15,6 +17,7 @@ async function Page() {
     </div>
     </div>
     </div>
+    <Footer/></div>
   );
 }
 

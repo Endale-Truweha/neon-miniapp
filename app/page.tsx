@@ -1,3 +1,4 @@
+"use client"
 import TelegramAuth from '@/components/TelegramAuth';
 import { getSession } from '@/utils/session';
 
