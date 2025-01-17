@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       inactiveColor: 'text-[#85827d]',
     },
     {
-      href: '/protected/follow',
+      href: '/',
       icon: <CircleCheckBig color="#12972c" />,
       label: 'Follow',
       isActive: pathname.includes('/follow'),
