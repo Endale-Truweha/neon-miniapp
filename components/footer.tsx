@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
         >
           <button
             onClick={() => handleNavigation(item.href)}
-            className="flex flex-col items-center w-full"
+            className="flex flex-col items-center w-full hover:bg-ethLightBlue-300"
           >
             {item.icon}
             <span className="mt-1 text-lg font-extrabold">{item.label}</span>
