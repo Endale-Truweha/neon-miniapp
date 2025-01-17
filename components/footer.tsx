@@ -1,38 +1,57 @@
-'use client'
-import React from 'react'
+'use client';
 
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { CircleAlert ,CircleCheckBig, Plus } from 'lucide-react'
-function Footer() {
-    const pathname = usePathname()
+import React from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { CircleAlert, CircleCheckBig, Plus } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const pathname = usePathname();
+
+  const menuItems = [
+    {
+      href: '/protected',
+      icon: <CircleAlert color="#12972c" />,
+      label: 'Status',
+      isActive: pathname.endsWith('/protected'),
+      activeColor: 'text-ethYellow-600',
+      inactiveColor: 'text-ethYellow-300',
+    },
+    {
+      href: '/protected/compleat',
+      icon: <Plus color="#12972c" />,
+      label: 'Compleat',
+      isActive: pathname.includes('/compleat'),
+      activeColor: 'text-ethGray-100',
+      inactiveColor: 'text-[#85827d]',
+    },
+    {
+      href: '/protected/follow',
+      icon: <CircleCheckBig color="#12972c" />,
+      label: 'Follow',
+      isActive: pathname.includes('/follow'),
+      activeColor: 'text-ethGray-100',
+      inactiveColor: 'text-[#85827d]',
+    },
+  ];
+
   return (
-    <div>
-      <div className="fixed bottom-0  w-full  bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs p-2">
-      
-        <div className={`text-center  w-1/5 ${pathname.endsWith('/protected')  ? ' bg-[#1c1f24]  text-ethYellow-600' : ' text-ethYellow-300'}      m-1 p-2 rounded-2xl`}>
-        <Link href="/protected">
-        <CircleAlert color="#12972c"  />
-          <p className="mt-1 text-lg font-extrabold ">Status</p>
+    <div className="fixed bottom-0 w-full bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs p-2">
+      {menuItems.map((item, index) => (
+        <div
+          key={index}
+          className={`text-center w-1/5 ${
+            item.isActive ? `bg-[#1c1f24] ${item.activeColor}` : item.inactiveColor
+          } m-1 p-2 rounded-2xl`}
+        >
+          <Link href={item.href}>
+            {item.icon}
+            <p className="mt-1 text-lg font-extrabold">{item.label}</p>
           </Link>
         </div>
-        <div className={`text-center  w-1/5  ${pathname.includes('/compleat')  ? ' bg-[#1c1f24] text-ethGray-100' : 'text-[#85827d]'} `}>
-        <Link href="/protected/compleat">
-        <Plus color="#12972c" />
-        
-          <p className="mt-1 text-lg font-extrabold ">compleat</p>
-          </Link>
-        </div>
-      
-        <div className={`text-center  w-1/5  ${pathname.includes('/follow')  ? ' bg-[#1c1f24] text-ethGray-100 ' : 'text-[#85827d]'} `}>
-        <Link href="/protected/follow">
-        <CircleCheckBig  color="#12972c" />
-          <p className="mt-1 text-lg font-extrabold ">follow</p>
-          </Link>
-        </div>
-      </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
