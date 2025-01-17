@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import IssueCard from "@/components/IssueCard";
+import Footer from "@/components/footer";
 
 interface Issue {
   id: string;
@@ -71,6 +72,8 @@ export default function IssuesPage() {
       </div>
     </div></div>
 
-</div></div></div>
+</div></div>
+<Footer/>
+</div>
   );
 }
