@@ -17,7 +17,7 @@ function Footer() {
           </Link>
         </div>
         <div className={`text-center  w-1/5  ${pathname.includes('/bank')  ? ' bg-[#1c1f24] text-ethGray-100' : 'text-[#85827d]'} `}>
-        <Link href="#">
+        <Link href="/protected/compleat">
         <Plus color="#12972c" />
         
           <p className="mt-1">compleat</p>
@@ -25,7 +25,7 @@ function Footer() {
         </div>
       
         <div className={`text-center  w-1/5  ${pathname.includes('/earn')  ? ' bg-[#1c1f24] text-ethGray-100 ' : 'text-[#85827d]'} `}>
-        <Link href="#">
+        <Link href="/protected/follow">
         <CircleCheckBig  color="#12972c" />
           <p className="mt-1">follow</p>
           </Link>

@@ -26,7 +26,7 @@ model TelegramUser {
   username   String?
   sensorlist Sensorlist[]
   status      Status[] // One-to-many relationship with Status
-  issues      Issue[]  // One-to-many relationship with Issue
+ // issues      Issue[]  // One-to-many relationship with Issue
   user  User ?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt @default(now()) 
@@ -84,8 +84,8 @@ model Issue {
   description String
   status      IssueStatus 
  
-  telegramUserId        String        // Foreign key to the User
-  telegramUser        TelegramUser        @relation(fields: [telegramUserId  ], references: [id])
+  //telegramUserId        String        // Foreign key to the User
+ // telegramUser        TelegramUser        @relation(fields: [telegramUserId  ], references: [id])
    createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 }
