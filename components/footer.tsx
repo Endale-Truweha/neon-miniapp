@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { CircleAlert, CircleCheckBig, Plus } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const menuItems = [
     {
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       inactiveColor: 'text-[#85827d]',
     },
     {
-      href: '/',
+      href: '/protected/follow',
       icon: <CircleCheckBig color="#12972c" />,
       label: 'Follow',
       isActive: pathname.includes('/follow'),
@@ -34,6 +34,10 @@ const Footer: React.FC = () => {
       inactiveColor: 'text-[#85827d]',
     },
   ];
+
+  const handleNavigation = (href: string) => {
+    router.push(href);
+  };
 
   return (
     <div className="fixed bottom-0 w-full bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs p-2">
@@ -44,12 +48,13 @@ const Footer: React.FC = () => {
             item.isActive ? `bg-[#1c1f24] ${item.activeColor}` : item.inactiveColor
           } m-1 p-2 rounded-2xl`}
         >
-          <Link href={item.href}>
-            <button className="flex flex-col items-center">
-              {item.icon}
-              <span className="mt-1 text-lg font-extrabold">{item.label}</span>
-            </button>
-          </Link>
+          <button
+            onClick={() => handleNavigation(item.href)}
+            className="flex flex-col items-center w-full"
+          >
+            {item.icon}
+            <span className="mt-1 text-lg font-extrabold">{item.label}</span>
+          </button>
         </div>
       ))}
     </div>
