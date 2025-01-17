@@ -45,8 +45,10 @@ const Footer: React.FC = () => {
           } m-1 p-2 rounded-2xl`}
         >
           <Link href={item.href}>
-            {item.icon}
-            <p className="mt-1 text-lg font-extrabold">{item.label}</p>
+            <button className="flex flex-col items-center">
+              {item.icon}
+              <span className="mt-1 text-lg font-extrabold">{item.label}</span>
+            </button>
           </Link>
         </div>
       ))}
