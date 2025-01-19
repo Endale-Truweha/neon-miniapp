@@ -52,7 +52,7 @@ export default function IssueForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white text-black shadow-md rounded-md">
+    <div className="max-w-md mx-auto p-6 bg-white text-black shadow-[48px] rounded-t-[48px]">
       <h1 className="text-2xl font-bold mb-4">Create Issue</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         {/* Description Field */}
@@ -81,7 +81,7 @@ export default function IssueForm() {
             <SelectTrigger>
               <SelectValue placeholder="Select status" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className='bg-white'>
               <SelectItem value="STOP">STOP</SelectItem>
               <SelectItem value="SLOW">SLOW</SelectItem>
            
@@ -95,11 +95,11 @@ export default function IssueForm() {
         {/* Telegram User ID Field */}
         <div>
           <label htmlFor="telegramUserId" className="block text-sm font-medium text-gray-700">
-            Telegram User ID
+            User ID
           </label>
           <Input
             id="telegramUserId"
-            placeholder="Enter Telegram User ID"
+            placeholder="User ID"
             {...register("telegramUserId")}
             className={errors.telegramUserId ? "border-red-500" : ""}
           />

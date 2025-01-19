@@ -11,9 +11,9 @@ interface IssueCardProps {
 const IssueCard: FC<IssueCardProps> = ({ id,description, status}) => {
   return (
     <Link href={`/protected/detail/${id}`}>
-    <div className="bg-white shadow-md rounded-md p-4">
+    <div className="bg-ethLime-500 text-ethGray-800 shadow-[48px] rounded-[28px] p-4">
       <h3 className="text-lg font-semibold mb-2">{description}</h3>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm ">
         <span className="font-medium">Status:</span> {status}
       </p>
     

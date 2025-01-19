@@ -16,7 +16,7 @@ async function Page() {
         <div>{JSON.stringify(session.user)}</div>
       )}
      
-    <div className='flex flex-col rounded-t-[48px] bg-ethBlack-500 border-t-2 shadow-2xl border-ethYellow-500 w-full grow p-8'>
+    <div className='flex flex-col justify-center items-center rounded-t-[48px] bg-ethBlack-500 border-t-2 shadow-2xl border-ethYellow-500 w-full grow p-8'>
       
      <IssueForm/>
     </div>

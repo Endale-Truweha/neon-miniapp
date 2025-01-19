@@ -6,7 +6,7 @@ const ChatPage: React.FC = () => {
     <div className="p-6">
          <BackButtonDemo />
       <h1 className="text-2xl font-bold mb-4">Chat Conversation</h1>
-      <p className="text-gray-600">Start your conversation here.</p>
+      <p className="text-gray-600">In this page there is a chat conversation b/n two users and the employee about  specific  tt .</p>
     </div>
   );
 };

@@ -19,9 +19,9 @@ const prtgData = {
 
 const StatusDisplay: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="max-w-4xl p-6 bg-gray-100 shadow-lg rounded-lg">
-        <h1 className="text-2xl font-bold mb-4 text-blue-600">PRTG Data Overview</h1>
+    <div className="min-h-screen  flex items-center justify-center">
+      <div className="max-w-4xl p-6  bg-ethLightBlue-500   shadow-[48px] rounded-t-[48px]">
+        <h1 className="text-2xl font-bold mb-4 text-ethYellow-600">PRTG Data Overview</h1>
         <div className="space-y-4">
           {/* Name */}
           <div>
