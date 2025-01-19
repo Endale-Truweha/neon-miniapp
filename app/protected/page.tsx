@@ -21,7 +21,7 @@ async function Page() {
     </div>
     </div>
     </div>
-    <Footer/></div>
+   </div>
   );
 }
 

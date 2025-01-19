@@ -73,7 +73,7 @@ export default function IssuesPage() {
     </div></div>
 
 </div></div>
-<Footer/>
+
 </div>
   );
 }
