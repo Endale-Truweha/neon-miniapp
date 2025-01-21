@@ -1,8 +1,11 @@
-"use client";
 
-export default function Header() {
+
+import { getSession } from "@/utils/session";
+
+export default async function Header() {
+  const session = await getSession();
   const companyName = "ethio telecom"; // Define the company name
-  const userName = "user name"; // Define the user name
+  const userName = session?.user?.username; // Define the user name
 
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-ethBlack-600  text-white shadow-md">
