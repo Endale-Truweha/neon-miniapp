@@ -3,7 +3,7 @@ import prisma from '@/lib/prisma';
 
 export async function POST(req: Request): Promise<NextResponse> {
   try {
-    const { description, status, telegramUserId } = await req.json(); // Assuming telegramUserId is passed in the request
+    const { description, status, /* telegramUserId */ } = await req.json(); // Assuming telegramUserId is passed in the request
 
     const final = await prisma.issue.create({
       data: {

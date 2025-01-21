@@ -12,7 +12,7 @@ const issueSchema = z.object({
   status: z.enum(["STOP", "SLOW"], {
     invalid_type_error: "Select a valid status.",
   }),
-  telegramUserId: z.string().min(1, { message: "Telegram User ID is required." }),
+ // telegramUserId: z.string().min(1, { message: "Telegram User ID is required." }),
 });
 
 type IssueFormValues = z.infer<typeof issueSchema>;
@@ -93,7 +93,7 @@ export default function IssueForm() {
         </div>
 
         {/* Telegram User ID Field */}
-        <div>
+       {/*  <div>
           <label htmlFor="telegramUserId" className="block text-sm font-medium text-gray-700">
             User ID
           </label>
@@ -106,7 +106,7 @@ export default function IssueForm() {
           {errors.telegramUserId && (
             <p className="text-red-500 text-sm mt-1">{errors.telegramUserId.message}</p>
           )}
-        </div>
+        </div> */}
 
         {/* Submit Button */}
         <Button type="submit" disabled={loading} className="w-full">
