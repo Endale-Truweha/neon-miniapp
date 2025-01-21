@@ -20,10 +20,10 @@ export default async function Header() {
       <div className="text-lg font-bold">{companyName}</div>
 
       {/* User Name */}
-      <div className="text-sm font-medium flex">
+      <div className="text-sm font-medium flex items-center">
       <Avatar>
       <AvatarImage src={userImage} alt="@shadcn" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback></AvatarFallback>
     </Avatar>
 
          <span className="font-semibold">{userName}</span>
