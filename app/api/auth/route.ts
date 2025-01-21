@@ -10,10 +10,16 @@ export async function POST(request: Request) {
 
   if (validationResult.validatedData) {
     console.log("Validation result: ", validationResult)
-    const user = { telegramId: validationResult.user ,
-      username: validationResult.user.username,
+    const user = { telegramId: validationResult.user.id ,
+      username: validationResult.user.first_name,
+      lastName: validationResult.user.last_name,
+      photoUrl: validationResult.user.photo_url,
+      languageCode: validationResult.user.language_code
     
     }
+
+
+
 
     // Create a new session
     const expires = new Date(Date.now() + SESSION_DURATION)
