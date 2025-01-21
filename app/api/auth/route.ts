@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   if (validationResult.validatedData) {
     console.log("Validation result: ", validationResult)
-    const user = { telegramId: validationResult.user.id ,
+    const user = { telegramId: validationResult.user ,
       username: validationResult.user.username,
     
     }
